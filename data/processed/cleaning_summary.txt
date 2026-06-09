@@ -1,0 +1,16 @@
+Titanic Data Cleaning Summary
+==============================
+
+- Loaded raw dataset with 891 rows and 12 columns.
+- Removed 0 duplicate rows.
+- Handled missing values: Age=median, Embarked=mode, Cabin converted to useful indicators.
+- Created FamilySize and IsAlone features.
+- Capped numeric outliers with the 1.5 IQR rule.
+- Normalized numeric features with min-max scaling.
+- Encoded categorical columns: Sex, Embarked, and Cabin deck.
+- Dropped high-cardinality/raw text columns: Name, Ticket, Cabin, Embarked, Cabin_Deck.
+- Final cleaned dataset has 891 rows and 28 columns.
+- Missing values before cleaning: 866; after cleaning: 0.
+
+Final columns:
+PassengerId, Survived, Pclass, Sex, Age, SibSp, Parch, Fare, Cabin_Known, FamilySize, IsAlone, Age_Norm, Fare_Norm, SibSp_Norm, Parch_Norm, FamilySize_Norm, Embarked_C, Embarked_Q, Embarked_S, Deck_A, Deck_B, Deck_C, Deck_D, Deck_E, Deck_F, Deck_G, Deck_T, Deck_Unknown
